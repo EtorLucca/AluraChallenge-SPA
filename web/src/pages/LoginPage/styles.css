@@ -1,0 +1,50 @@
+#login {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 95vh;
+  padding: 0 2rem;
+}
+
+#login .form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px #000;
+  max-width: 480px;
+  min-height: 50vh;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+#login .field {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#login .title {
+  text-align: center;
+}
+
+#login .field input {
+  width: 100%;
+}
+
+#login .actions {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+#login .logo {
+  height: 20vh;
+}
+
+#login .cadastro {
+  font-size: 12px;
+  text-align: center;
+  margin: -10px 0 10px 0;
+}
+
+#login .text {
+  margin-right: 5px;
+}

@@ -1,0 +1,44 @@
+.form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 95vh;
+  padding: 0 2rem;
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px #000;
+    padding: 15px;
+}
+
+.logo {
+  height: 20vh;
+}
+
+.h1{
+    font-size: 48px;
+}
+
+.stepper{
+    background-color: #fff;
+}
+
+.login__link{
+    text-align: center;
+    font-size: 14px;
+}
+
+.success__text{
+  text-align: center;
+  color: green;
+}
+
+.form__entrega{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
