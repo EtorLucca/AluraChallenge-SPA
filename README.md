@@ -43,41 +43,47 @@ Passo a passo para visualização do projeto
 
 - Criar na pasta server um arquivo .env com o seguinte texto:
       
-      <code>
+ 
       MONGODB_URI=
       APP_SECRET=
-      </code>
+     
     
     - Colar a uri copiada no passo anterior
 
       <code>MONGODB_URI=uricopiadaaqui</code>
 
-    -Substitua "<code><password></code>" pela senha cadastrada na hora da criação do cluster
+    -Substitua <code>`<password>`</code> pela senha cadastrada na hora da criação do cluster
 
-    - Criar uma sting forte (pode ser usado geradores de string) e inserir no app_secret:
+    - Criar uma sting forte (pode ser usado geradores de string) e inserir no app_secret:<br>
       <code> exemplo: APP_SECRET=abc123 </code>
 
-- Abra um terminal do VS Code na pasta server e digite o comando:
+- Abra um terminal do VS Code na pasta server e digite o comando:<br>
     <code>
     npm run dev
-  ou
-    yarn dev
-    </code>
+    </code><br>
+  ou <br>
+    <code>
+    yarn dev <br>
+    </code><br>
 
-- Abra um terminal do VS Code na pasta web e digite o comando:
+- Abra um terminal do VS Code na pasta web e digite o comando:<br>
     <code>
     npm install
-  ou
-    yarn add
-    </code>
-  para instalar todos as dependencias do projeto
+    </code><br>
+  ou<br>
+    <code>
+    yarn add<br>
+    </code><br>
+  para instalar todos as dependencias do projeto<br>
 
-- Após a instalação dos pacotes digite o comando:
-  <code>
+- Após a instalação dos pacotes digite o comando:<br>
+    <code>
     npm start
-  ou
-    yarn start
-    </code>
+    </code><br>
+  ou<br>
+    <code>
+    yarn start<br>
+    </code><br>
 
 O VS Code irá abrir o navegador com o site rodando
       
