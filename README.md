@@ -2,12 +2,13 @@ PROJETO AINDA EM CONSTRUÇÃO!!!
 
 Funcionalidades já implementadas:
 - Página inicial com login (com autenticação no banco de dados)
-- Pagina de Cadastro de novo usuário (com stepper)
-- Página de edição de código com highlight
+- Página de Cadastro de novo usuário (com stepper)
+- Página Editor de Código com opção de salvar projetos 
+- Página da comunidade com listagem de projetos salvos
+- Barra de pesquisa funcional
 
 Ainda falta:
-- Implementação do "salvar" código na página de Edição de código
-- Implementaçao da listagem e pesquisa de projetos na página Comunidade
+- Correção da aplicação de Highlight no editor de código.
 
 
 
@@ -20,8 +21,10 @@ Alura Chalenge SPA, utilizando React JS, node JS e MongoDB.
 Tecnologias utilizadas:
 - React JS
 - Node JS
-- MongoDB
-- API's
+- MongoDB (Atlas)
+- Express
+- Axios
+- API's diversas
 
 --------------------------------------------------------------------------------
 
@@ -66,6 +69,16 @@ Passo a passo para visualização do projeto
     yarn dev <br>
     </code><br>
 
+- Abra um terminal do VS Code na pasta server e digite o comando:<br>
+    <code>
+    npm install
+    </code><br>
+  ou<br>
+    <code>
+    yarn add<br>
+    </code><br>
+  para instalar todos as dependencias<br>
+
 - Abra um terminal do VS Code na pasta web e digite o comando:<br>
     <code>
     npm install
@@ -74,7 +87,7 @@ Passo a passo para visualização do projeto
     <code>
     yarn add<br>
     </code><br>
-  para instalar todos as dependencias do projeto<br>
+  para instalar todos as dependencias<br>
 
 - Após a instalação dos pacotes digite o comando:<br>
     <code>
