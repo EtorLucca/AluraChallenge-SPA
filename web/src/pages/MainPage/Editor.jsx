@@ -1,7 +1,7 @@
 import React from "react";
 import Menu from "../menu/Menu";
 import EditorCodigo from "./EditorCodigo";
-import "./styles.css";
+import "./mainpage.css";
 
 function Editor() {
   return (

@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./menu.css";
 import "https://kit.fontawesome.com/389645fe7b.js";
 
 function Menu() {
@@ -16,11 +17,11 @@ function Menu() {
           </div>
         </NavLink>
         <NavLink to="/comunidade" className="menu__nav--div">
-          <div className="menu__nav--iusers">
+          <div className="menu__nav--iusers active__icon">
             <i className="fas fa-users"></i>
           </div>
           <div className="menu__nav--text">
-            <span>Comunidade</span>
+            <span className="active">Comunidade</span>
           </div>
         </NavLink>
       </div>

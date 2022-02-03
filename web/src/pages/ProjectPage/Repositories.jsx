@@ -1,54 +1,55 @@
 import React from "react";
+import "https://kit.fontawesome.com/389645fe7b.js";
 
 function Repositories({ repositories, onDeleteRepo }) {
   return (
-    <>
+    <div className="repo">
       {repositories.map((repository) => (
-        <div class="project" key={repository._id}>
-          <div class="code__navegacao" style="background-color:${color};">
-            <div class="code__navegacao--text">
-              <div class="elipse__small red__small">
-                <span class="none">.</span>
+        <div className="project" key={repository._id}>
+          <div className="code__navegacao" style={{backgroundColor: repository.color}}>
+            <div className="code__navegacao--text">
+              <div className="elipse__small red__small">
+                <span className="none">.</span>
               </div>
-              <div class="elipse__small yellow__small">
-                <span class="none">.</span>
+              <div className="elipse__small yellow__small">
+                <span className="none">.</span>
               </div>
-              <div class="elipse__small green__small">
-                <span class="none">.</span>
+              <div className="elipse__small green__small">
+                <span className="none">.</span>
               </div>
-              <div class="text__navegacao">
-                <xmp>${code}</xmp>
+              <div className="text__navegacao">
+                <xmp>{repository.code}</xmp>
               </div>
             </div>
           </div>
           <div>
-            <h2 class="projetos__titulo">${nomeProjeto}</h2>
-            <span class="projetos__descricao">${descricao}</span>
+            <h2 className="projetos__titulo">{repository.nomeProjeto}</h2>
+            <span className="projetos__descricao">{repository.descricao}</span>
           </div>
-          <div class="projetos__chat">
-            <div class="projetos__chat--modificador">
-              <div class="projetos__comentarios">
-                <i class="fas fa-comment"></i>
-                <span class="contador__comentarios">9</span>
+          <div className="projetos__chat">
+            <div className="projetos__chat--modificador">
+              <div className="projetos__comentarios">
+                <i className="fas fa-comment"></i>
+                <span className="contador__comentarios">9</span>
               </div>
-              <div class="projetos__like">
-                <i class="fas fa-heart"></i>
-                <span class="contador__like">9</span>
+              <div className="projetos__like">
+                <i className="fas fa-heart"></i>
+                <span className="contador__like">9</span>
               </div>
             </div>
-            <div class="projetos__perfil">
+            <div className="projetos__perfil">
               <img
-                src="./img/foto-perfil.png"
+                src="../../img/foto-perfil.png"
                 alt="imagem perfil"
-                class="header__perfil--img"
+                className="header__perfil--img"
               />
-              <span class="header__perfil--nome">@Étor</span>
+              <span className="header__perfil--nome">{repository.user}</span>
             </div>
           </div>
           <button onClick={() => onDeleteRepo(repository)}>Apagar</button>
         </div>
       ))}
-    </>
+    </div>
   );
 }
 

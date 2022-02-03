@@ -9,6 +9,7 @@
 
 #login .form {
   background-color: #fff;
+  border: none;
   border-radius: 8px;
   box-shadow: 5px 5px 5px #000;
   max-width: 480px;

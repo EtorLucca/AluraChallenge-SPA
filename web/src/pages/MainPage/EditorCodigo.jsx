@@ -1,12 +1,13 @@
 import React, { useState, useContext } from "react";
 import { Button } from "@material-ui/core";
-import "./githubdark.css";
+import { aplicaHighlight } from "./AplicaHighlight";
 import { useEffect } from "react";
+import "./githubdark.css";
 
 //----------------------novo código--------------------------------------------------
 import { createRepository } from "../../services/api";
 import { AuthContext } from "../../contexts/auth";
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 //-----------------------------------------------------------------------------------
 
@@ -15,6 +16,8 @@ function EditorCodigo() {
   const [nomeProjeto, setNomeProjeto] = useState("");
   const [descricao, setDescricao] = useState("");
   const [code, setCode] = useState("");
+  const [linguagem, setLinguagem] = useState("javascript");
+  //const [codex, setCodex] = useState("");
 
   const novoProjeto = {
     color,
@@ -29,7 +32,7 @@ function EditorCodigo() {
   }, [color]);
 
 //------------------código novo-------------------------------------------------
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
   const { user } = useContext(AuthContext);
 
   const handleNewRepo = async () => {
@@ -37,7 +40,7 @@ function EditorCodigo() {
 
     try {
       await createRepository( novoProjeto, user?.id);
-      //navigate("/comunidade");
+      navigate("/comunidade");
     } catch (err) {
       console.error(err);
     }
@@ -46,7 +49,7 @@ function EditorCodigo() {
 //------------------------------------------------------------------------------
 
   return (
-    <main id="main__editor">
+    <form id="main__editor">
       <div className="principal">
         <div className="code__editor" id="code__editor">
           <div className="code__editor--text">
@@ -59,23 +62,32 @@ function EditorCodigo() {
             <div className="elipse green">
               <span className="none">.</span>
             </div>
-            <div className="code__wrapper">
+            <div className="code__wrapper" id="code__wrapper">
               <code
+                type="text"
                 className="text__editor hljs"
+                id="code"
                 aria-required="true"
                 contentEditable="true"
                 aria-label="Editor de código"
                 value={code}
-                onBlur={() => {
+                onBlur={(e) => {
                   setCode(document.querySelector(".text__editor").innerText);
+                  //setCodex(e.target);
                 }}
               >
-                Digite o seu código aqui!
               </code>
             </div>
           </div>
         </div>
-        <div className="main__button">Visualizar com o highlight</div>
+        <Button 
+          variant="contained" 
+          className="main__button"
+          color="primary"
+          onClick={()=>{aplicaHighlight(linguagem)}}
+        >
+          Visualizar com o highlight
+        </Button>
       </div>
       <div className="barra__lateral">
         <div className="project__title">SEU PROJETO</div>
@@ -101,8 +113,13 @@ function EditorCodigo() {
         </div>
         <div className="project__title">PERSONALIZAÇÃO</div>
         <div className="flex__tablet">
-          <div className="project__language">
-            <select className="project__language--select">
+          <div className="project__language" id="project__language">
+            <select 
+              name="languageSelect"
+              className="project__language--select"
+              id="project__language--select"
+              //onSelect={(e) => {setLinguagem(e.target.value)}}
+            >
               <option className="project__language--option" value="javascript">
                 JavaScript
               </option>
@@ -139,7 +156,7 @@ function EditorCodigo() {
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       <script src="./AplicaHighligth.js"></script>
-    </main>
+    </form>
   );
 }
 

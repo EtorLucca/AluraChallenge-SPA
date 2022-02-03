@@ -1,27 +1,28 @@
 import React, { useState, useEffect, useContext } from "react";
-import "./styles.css";
-import Nav from "./Nav";
-import Search from "./Search";
-import Repositories from "./Repositories";
+import "./projectpage.css";
+import Nav from "../MainPage/Nav";
+import Menu from "../menu/Menu";
+import Search from "../MainPage/Search";
+import Repositories from "../ProjectPage/Repositories";
 import {
   getRepositories,
-  createRepository,
   destroyRepository,
 } from "../../services/api";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/auth";
 
-function MainPage() {
+function ComunityPage() {
   const { user, logout } = useContext(AuthContext);
   const [repositories, setRepositories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [loadingError, setLoadingError] = useState(false);
 
-  const loadData = async (query = "") => {
+  const loadData = async(query = "") => {
     try {
       setLoading(true);
       const response = await getRepositories(user?.id, query);
-      setRepositories(response.data);
+      const result = await response.data.filter(project => project.nomeProjeto.toLowerCase().indexOf(query) !== -1);
+      setRepositories(result);
       setLoading(false);
     } catch (err) {
       console.error(err);
@@ -30,36 +31,25 @@ function MainPage() {
   };
 
   useEffect(() => {
-    (async () => await loadData())();
+      (async() => await loadData())();
   }, []);
 
-  const handleLogout = () => {
+  function handleLogout() {
     logout();
-  };
+  }
 
-  const handleSearch = (query) => {
-    loadData(query);
+  const handleSearch = async (query) => {
+    await loadData(query);
   };
 
   const handleDeleteRepo = async (repository) => {
     await destroyRepository(user?.id, repository._id);
-    await loadData();
-  };
-
-  const handleNewRepo = async (url) => {
-    console.log("new repo", url);
-    try {
-      await createRepository(user?.id, url);
-      await loadData();
-    } catch (err) {
-      console.error(err);
-      setLoadingError(true);
-    }
+    loadData();
   };
 
   if (loadingError) {
     <div className="loading">
-      Erro ao carregar os dados de repositório. <Link to="/login">Voltar</Link>
+      Erro ao carregar os dados de repositório. <Link to="/">Voltar</Link>
     </div>;
   }
 
@@ -71,13 +61,15 @@ function MainPage() {
     <div id="main">
       <Nav onLogout={handleLogout} />
       <Search onSearch={handleSearch} />
+      <div id="index__container">
+      <Menu/>
       <Repositories
         repositories={repositories}
         onDeleteRepo={handleDeleteRepo}
-        onNewRepo={handleNewRepo}
       />
+      </div>
     </div>
   );
 }
 
-export default MainPage;
+export default ComunityPage;

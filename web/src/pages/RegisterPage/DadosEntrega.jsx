@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, TextField } from "@material-ui/core";
 import { useState } from "react";
-import "./styles.css";
+import "./registerpage.css";
 
 function DadosEntrega({ onSubmit }) {
   const [cep, setCep] = useState("");

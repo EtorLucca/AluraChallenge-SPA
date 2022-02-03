@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/auth";
 import { Button, TextField } from "@material-ui/core";
-import "./styles.css";
+import "./loginpage.css";
 import logo from "../../img/logo.png";
 
 function LoginPage() {
@@ -16,7 +16,7 @@ function LoginPage() {
 
   return (
     <div id="login">
-      <img className="logo" src={logo} />
+      <img className="logo" alt="logo" src={logo} />
       <div className="form">
         <h1 className="title">Faça seu Login</h1>
         <div className="field">

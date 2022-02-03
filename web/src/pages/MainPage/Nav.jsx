@@ -6,7 +6,7 @@ function Nav({ onLogout }) {
   
   return (
     <div className="nav">
-      <img className="logo" src={logo} />
+      <img className="logo" alt="logo" src={logo} />
       <Button color="primary" mode="dark" variant="contained" onClick={onLogout}>Sair</Button>
     </div>
   );

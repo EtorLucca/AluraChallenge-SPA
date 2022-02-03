@@ -1,16 +1,16 @@
 import React from "react";
-import { Container, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import ValidacoesCadastro from "../../contexts/ValidacoesCadastro";
 import { validarCpf, validarPassword } from "../../models/cadastro";
 import FormularioCadastro from "./FormularioCadastro";
 import { api } from "../../services/api";
-import "./styles.css";
+import "./registerpage.css";
 import logo from "../../img/logo.png"
 
 function RegisterPage() {
 
   return (
-    <Container className="form" component="article" maxWidth="sm">
+    <div id="register">
       <img className="logo" src={logo} alt="logo" />
       <div className="container">
       <Typography className="h1" variant="h3" component="h1" align="center">
@@ -22,7 +22,7 @@ function RegisterPage() {
         <FormularioCadastro onSubmit={onSubmitForm} />
       </ValidacoesCadastro.Provider>
       </div>
-    </Container>
+    </div>
   );
 }
 

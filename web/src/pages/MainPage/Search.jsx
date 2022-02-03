@@ -13,6 +13,7 @@ function Search({ onSearch }) {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
+      <button className="btn__clear" onClick={() => onSearch("")}>Limpar</button>
       <button className="btn__search" onClick={() => onSearch(query)}>Procurar</button>
     </div>
   );

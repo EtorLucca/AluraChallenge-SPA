@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import DadosEntrega from "./DadosEntrega";
 import DadosPessoais from "./DadosPessoais";
 import DadosUsuario from "./DadosUsuario";
-import "./styles.css";
+import "./registerpage.css";
 
 function FormularioCadastro({ onSubmit }) {
   const [etapaAtual, setEtapaAtual] = useState(0);

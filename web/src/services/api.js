@@ -14,7 +14,6 @@ export const getRepositories = async (userId, query) => {
   if (query !== "") {
     url += `?q=${query}`;
   }
-
   return api.get(url);
 };
 

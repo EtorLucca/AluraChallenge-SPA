@@ -8,18 +8,19 @@ import {
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import MainPage from "./pages/MainPage";
+import ComunityPage from "./pages/ProjectPage";
 import { AuthProvider, AuthContext } from "./contexts/auth";
 
 function AppRoutes() {
   const Private = ({ children }) => {
     const { authenticated, loading } = useContext(AuthContext);
 
-    if(loading){
-        return <div className="loading">Carregando...</div>
+    if (loading) {
+      return <div className="loading">Carregando...</div>;
     }
 
     if (!authenticated) {
-      return <Navigate to="/login" />;
+      return <Navigate to="/" />;
     }
 
     return children;
@@ -30,13 +31,22 @@ function AppRoutes() {
       <AuthProvider>
         <Routes>
           <Route exact path="/" element={<LoginPage />} />
-          <Route exact path="/register" element={<RegisterPage/>} />
+          <Route exact path="/register" element={<RegisterPage />} />
           <Route
             exact
             path="/editor"
             element={
               <Private>
                 <MainPage />
+              </Private>
+            }
+          />
+          <Route
+            exact
+            path="/comunidade"
+            element={
+              <Private>
+                <ComunityPage />
               </Private>
             }
           />

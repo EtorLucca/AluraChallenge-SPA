@@ -1,4 +1,4 @@
-.form {
+#register {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -41,4 +41,5 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 500px;
 }
