@@ -81,7 +81,7 @@ class RepositoriesController {
 
       const repository = await Repository.findOne({
         userId: user_id,
-        id
+        _id: id
       });
 
       if (!repository) {

@@ -43,7 +43,7 @@ function ComunityPage() {
   };
 
   const handleDeleteRepo = async (repository) => {
-    await destroyRepository(user?.id, repository._id);
+    await destroyRepository(repository.userId, repository._id);
     loadData();
   };
 

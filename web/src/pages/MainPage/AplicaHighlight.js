@@ -1,15 +1,11 @@
 import hljs from "highlight.js";
 
-async function mudaLinguagem(){
-  const linguagem = document.getElementById("project__language--select");
+export async function aplicaHighlight(linguagem) {
   const areaCodigo = document.getElementById("code__wrapper");
-  const codigo = document.getElementById("code");
-  areaCodigo.innerHTML = `<code class="text__editor hljs ${linguagem.value}" contenteditable="true" aria-label="Editor de código"></code>`;
-  areaCodigo.firstChild.textContent = codigo.innerText;
-}
+  const codigo = document.getElementById("code").innerText;
+  areaCodigo.innerHTML = `<code id="code" class="text__editor hljs ${linguagem}" contenteditable="true" aria-label="Editor de código"></code>`;
+  areaCodigo.firstChild.textContent = codigo;
 
-export async function aplicaHighlight() {
-  const codigo = document.getElementById("code");
-  await mudaLinguagem();
-  hljs.highlightElement(codigo);
+  const code = document.getElementById("code");
+  hljs.highlightElement(code);
 }

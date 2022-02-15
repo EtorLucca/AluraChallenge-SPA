@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "@mui/material";
 import "https://kit.fontawesome.com/389645fe7b.js";
 
 function Repositories({ repositories, onDeleteRepo }) {
@@ -6,7 +7,10 @@ function Repositories({ repositories, onDeleteRepo }) {
     <div className="repo">
       {repositories.map((repository) => (
         <div className="project" key={repository._id}>
-          <div className="code__navegacao" style={{backgroundColor: repository.color}}>
+          <div
+            className="code__navegacao"
+            style={{ backgroundColor: repository.color }}
+          >
             <div className="code__navegacao--text">
               <div className="elipse__small red__small">
                 <span className="none">.</span>
@@ -22,9 +26,22 @@ function Repositories({ repositories, onDeleteRepo }) {
               </div>
             </div>
           </div>
-          <div>
+          <div className="project__data">
+            <div>
             <h2 className="projetos__titulo">{repository.nomeProjeto}</h2>
             <span className="projetos__descricao">{repository.descricao}</span>
+            </div>
+            <div>
+              <Button
+                className="btn-delete"
+                color="warning"
+                onClick={() => onDeleteRepo(repository)}
+                size="small"
+                variant="outlined"
+              >
+                Apagar
+              </Button>
+            </div>
           </div>
           <div className="projetos__chat">
             <div className="projetos__chat--modificador">
@@ -46,7 +63,6 @@ function Repositories({ repositories, onDeleteRepo }) {
               <span className="header__perfil--nome">{repository.user}</span>
             </div>
           </div>
-          <button onClick={() => onDeleteRepo(repository)}>Apagar</button>
         </div>
       ))}
     </div>

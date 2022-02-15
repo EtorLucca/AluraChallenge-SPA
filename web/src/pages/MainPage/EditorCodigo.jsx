@@ -16,8 +16,8 @@ function EditorCodigo() {
   const [nomeProjeto, setNomeProjeto] = useState("");
   const [descricao, setDescricao] = useState("");
   const [code, setCode] = useState("");
-  const [linguagem, setLinguagem] = useState("javascript");
-  //const [codex, setCodex] = useState("");
+  const [linguagem, setLinguagem] = useState("");
+  const [disabled, setDisabled] = useState(true);
 
   const novoProjeto = {
     color,
@@ -65,7 +65,7 @@ function EditorCodigo() {
             <div className="code__wrapper" id="code__wrapper">
               <code
                 type="text"
-                className="text__editor hljs"
+                className={`text__editor hljs ${linguagem}`}
                 id="code"
                 aria-required="true"
                 contentEditable="true"
@@ -73,7 +73,6 @@ function EditorCodigo() {
                 value={code}
                 onBlur={(e) => {
                   setCode(document.querySelector(".text__editor").innerText);
-                  //setCodex(e.target);
                 }}
               >
               </code>
@@ -81,6 +80,8 @@ function EditorCodigo() {
           </div>
         </div>
         <Button 
+          id="main__button"
+          disabled={disabled}
           variant="contained" 
           className="main__button"
           color="primary"
@@ -118,7 +119,10 @@ function EditorCodigo() {
               name="languageSelect"
               className="project__language--select"
               id="project__language--select"
-              //onSelect={(e) => {setLinguagem(e.target.value)}}
+              onChange={(e) => {
+                setLinguagem(e.target.value)
+                setDisabled(false);
+              }}
             >
               <option className="project__language--option" value="javascript">
                 JavaScript

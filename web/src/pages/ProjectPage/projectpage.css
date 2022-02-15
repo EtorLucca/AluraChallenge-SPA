@@ -105,8 +105,7 @@
   font-weight: 700;
   font-size: 21px;
   line-height: 32px;
-  margin: 24px 24px 8px 24px;
-  width: 90%;
+  margin: 0 24px 8px 0;
 }
 
 .projetos__descricao{
@@ -115,7 +114,7 @@
   color: #ffffff;
   width: 90%;
   opacity: 80%;
-  margin: 24px 24px 8px 24px;
+  /* margin: 24px 24px 8px 24px; */
 }
 
 .projetos__perfil{
@@ -166,4 +165,12 @@
 
 .contador__comentarios, .contador__like{
   color: #fff;
+}
+
+.project__data{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
 }
