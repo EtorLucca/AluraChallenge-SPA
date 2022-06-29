@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./menu.css";
-import "https://kit.fontawesome.com/389645fe7b.js";
 
 function Menu() {
   return (

@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "@mui/material";
-import "https://kit.fontawesome.com/389645fe7b.js";
 
 function Repositories({ repositories, onDeleteRepo }) {
   return (
