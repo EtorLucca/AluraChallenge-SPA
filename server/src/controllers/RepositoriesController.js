@@ -20,6 +20,7 @@ class RepositoriesController {
 
       //--------- Filtrando resultados de repositório por usuário e pesquisa
       const repositories = await Repository.find({
+        //---- Caso for pra mostrar todos os repositórios para todos os usuários comentar linha abaixo (userId: user_id)
         userId: user_id,
         ...query,
       });
