@@ -1,30 +1,29 @@
-PROJETO AINDA EM CONSTRUÇÃO!!!
+<h1>Projeto Repositório de códigos com autenticação (Login e senha)</h1><br>
+<a href="https://alura-challenge-spa.vercel.app/">Visualizar Projeto</a><br>
+*O site pode demorar um pouco para fazer o login (tempo necessário para iniciar o servidor).<br>
+*Cadastrar um usuário e senha novo ou utilizar -> login: teste@teste.com.br / senha: secret<br><br>
 
-Funcionalidades já implementadas:
+Funcionalidades implementadas:
 - Página inicial com login (com autenticação no banco de dados)
 - Página de Cadastro de novo usuário (com stepper)
-- Página Editor de Código com opção de salvar projetos 
-- Página da comunidade com listagem de projetos salvos
-- Barra de pesquisa funcional
-
-Ainda falta:
-- Correção da aplicação de Highlight no editor de código.
-
-
+- Página Editor de Código com opção de salvar projetos
+- Highlight do código escrito a partir da escolha da linguagem
+- Página da comunidade com listagem e exclusão de projetos salvos
+- Barra de pesquisa de projetos funcional
 
 --------------------------------------------------------------------------------
 Adição de funcionalidades ao projeto AluraChallenge.
 
-Alura Chalenge SPA, utilizando React JS, node JS e MongoDB.
-
-
-Tecnologias utilizadas:
+Tecnologias utilizadas nesse projeto:
 - React JS
 - Node JS
 - MongoDB (Atlas)
 - Express
 - Axios
-- API's diversas
+- Highlight JS
+- Cors
+- BCryptJS
+- JWT...
 
 --------------------------------------------------------------------------------
 
