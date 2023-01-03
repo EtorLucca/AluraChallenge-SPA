@@ -62,11 +62,11 @@ function ComunityPage() {
       <Nav onLogout={handleLogout} />
       <Search onSearch={handleSearch} />
       <div id="index__container">
-      <Menu/>
-      <Repositories
-        repositories={repositories}
-        onDeleteRepo={handleDeleteRepo}
-      />
+        <Menu/>
+        <Repositories
+          repositories={repositories}
+          onDeleteRepo={handleDeleteRepo}
+        />
       </div>
     </div>
   );

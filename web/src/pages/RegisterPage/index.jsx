@@ -1,26 +1,22 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
 import ValidacoesCadastro from "../../contexts/ValidacoesCadastro";
-import { validarCpf, validarPassword } from "../../models/cadastro";
+import { validarEmail, validarName, validarPassword } from "../../models/cadastro";
 import FormularioCadastro from "./FormularioCadastro";
 import { api } from "../../services/api";
 import "./registerpage.css";
-import logo from "../../img/logo.png"
+import logo from "../../img/logo.svg"
 
 function RegisterPage() {
 
   return (
     <div id="register">
       <img className="logo" src={logo} alt="logo" />
-      <div className="container">
-      <Typography className="h1" variant="h3" component="h1" align="center">
-        Cadastro
-      </Typography>
-      <ValidacoesCadastro.Provider
-        value={{ cpf: validarCpf, password: validarPassword }}
-      >
-        <FormularioCadastro onSubmit={onSubmitForm} />
-      </ValidacoesCadastro.Provider>
+      <div className="registerContainer">
+        <ValidacoesCadastro.Provider
+          value={{ password: validarPassword, name: validarName, email: validarEmail }}
+        >
+          <FormularioCadastro onSubmit={onSubmitForm} />
+        </ValidacoesCadastro.Provider>
       </div>
     </div>
   );

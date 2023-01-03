@@ -29,18 +29,9 @@ class UsersController {
   async create(req, res) {
     try {
       const {
+        name,
         email,
-        password,
-        nome,
-        sobrenome,
-        cpf,
-        promocoes,
-        novidades,
-        cep,
-        endereço,
-        numero,
-        estado,
-        cidade,
+        password
       } = req.body;
 
       //----------- Compara email (existente ou não) para criação de usuário
@@ -57,18 +48,9 @@ class UsersController {
 
       //----------- Criação do usuário
       const newUser = await User.create({
+        name,
         email,
         password: encryptedPassword,
-        nome,
-        sobrenome,
-        cpf,
-        promocoes,
-        novidades,
-        cep,
-        endereço,
-        numero,
-        estado,
-        cidade
       });
 
       return res.status(201).json(newUser);
@@ -81,18 +63,10 @@ class UsersController {
     try {
       const { id } = req.params;
       const { 
+        name,
         email, 
         password,
-        nome,
-        sobrenome,
-        cpf,
-        promocoes,
-        novidades,
-        cep,
-        endereço,
-        numero,
-        estado,
-        cidade } = req.body;
+      } = req.body;
 
       const user = await User.findById(id);
 
@@ -103,18 +77,9 @@ class UsersController {
       const encryptedPassword = await createPasswordHash(password);
 
       await user.updateOne({ 
+        name,
         email, 
         password: encryptedPassword,
-        nome,
-        sobrenome,
-        cpf,
-        promocoes,
-        novidades,
-        cep,
-        endereço,
-        numero,
-        estado,
-        cidade
       });
 
       return res.status(200).json();

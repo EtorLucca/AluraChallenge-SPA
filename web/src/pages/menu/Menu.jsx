@@ -5,22 +5,16 @@ import "./menu.css";
 function Menu() {
   return (
     <nav className="menu">
-      <div className="menu__titulo">MENU</div>
-      <div className="menu__nav">
-        <NavLink to="/editor" className="menu__nav--div">
-          <div className="menu__nav--iusers active__icon">
-            <i className="fas fa-code "></i>
-          </div>
-          <div className="menu__nav--text">
-            <span className="active">Editor de código</span>
+      <div className="title">Menu</div>
+      <div className="menuNav">
+        <NavLink to="/editor" className="navDiv">
+          <div className="navText code">
+            <span>Editor de código</span>
           </div>
         </NavLink>
-        <NavLink to="/comunidade" className="menu__nav--div">
-          <div className="menu__nav--iusers active__icon">
-            <i className="fas fa-users"></i>
-          </div>
-          <div className="menu__nav--text">
-            <span className="active">Comunidade</span>
+        <NavLink to="/comunidade" className="navDiv">
+          <div className="navText comunity">
+            <span>Projetos Salvos</span>
           </div>
         </NavLink>
       </div>

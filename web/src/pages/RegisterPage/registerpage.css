@@ -3,50 +3,81 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: auto;
-  min-height: 95vh;
+  align-items: center;
+  height: 100vh;
   padding: 0 2rem;
-  width: fit-content;
 }
 
-.container{
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
+.registerContainer{
+  border: none;
   border-radius: 8px;
-  box-shadow: 5px 5px 5px #000;
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-  width: fit-content;
+  max-width: 480px;
+  min-height: 50vh;
+  padding: 0.5rem;
+  width: 100%;
+  margin-top: 38px;
+}
+
+.formContainer {
+  width: 100%;
 }
 
 .logo {
   height: 20vh;
 }
 
-.h1{
-    font-size: 48px;
+.field {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
-.stepper{
-    background-color: #fff;
+.label {
+  color: #E1E1E6;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.login__link{
-    text-align: center;
-    font-size: 14px;
+.field input {
+  height: 48px;
+  width: 100%;
+  color: #7C7C8A;
+  background-color: #202024;
+  margin: 12px 0 16px 0;
+  border: none;
+  padding-left: 48px;
 }
 
-.success__text{
+.error {
+  color: #ED4337;
+  font-size: 0.7rem;
+  display: block;
+  margin: -10px 0 16px 0;
+}
+
+.register {
+  font-size: 12px;
   text-align: center;
-  color: green;
+  color: #7C7C8A;
+  margin-top: 36px;
 }
 
-.form__entrega{
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 500px;
+.text {
+  text-decoration: underline;
+  color: #7C7C8A;
+}
+
+.actions {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.btnSubmit {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 43px;
+  background-color: #81D8F7;
 }

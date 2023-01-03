@@ -1,9 +1,8 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/auth";
-import { Button, TextField } from "@material-ui/core";
 import "./loginpage.css";
-import logo from "../../img/logo.png";
+import logo from "../../img/logo.svg";
 
 function LoginPage() {
   const { login } = useContext(AuthContext);
@@ -18,39 +17,37 @@ function LoginPage() {
     <div id="login">
       <img className="logo" alt="logo" src={logo} />
       <div className="form">
-        <h1 className="title">Faça seu Login</h1>
         <div className="field">
-          <TextField
-            label="Email"
-            variant="outlined"
-            fullWidth
+          <span className="label">Endereço de e-mail</span>
+          <input
+            className="input email"
             type="email"
             name="email"
             id="email"
+            placeholder="email@example.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-          />
+          ></input>
         </div>
         <div className="field">
-          <TextField
-            label="Senha"
-            variant="outlined"
-            fullWidth
+          <span className="label">Senha</span>
+          <input
+            className="input senha"
             type="password"
             name="password"
             id="password"
+            placeholder="************"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <div className="cadastro">
-          <span className="text">Ainda não possui cadastro?</span>
-          <Link to="/register">Cadastrar</Link>
+          ></input>
         </div>
         <div className="actions">
-          <Button variant="contained" color="primary" onClick={handleLogin}>
-            Entrar
-          </Button>
+          <button className="btnSubmit" onClick={handleLogin}>
+            Entrar na Plataforma
+          </button>
+        </div>
+        <div className="cadastro">
+          <Link to="/register"><span className="text">Ainda não possui conta? Crie uma agora!</span></Link>
         </div>
       </div>
     </div>

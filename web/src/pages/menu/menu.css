@@ -1,99 +1,60 @@
-/*Menu*/
-
 .menu {
-  margin: 0 0 32px 32px;
+  margin-left: 32px;
   min-width: 200px;
+  background-color: #202024;
+  padding: 32px 16px;
 }
 
-.menu__icone {
-  display: none;
-}
-
-.menu__nav {
+.menuNav {
   display: flex;
   flex-direction: column;
 }
 
-.menu__titulo {
-  color: #ffffff;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 12px;
+.title {
+  color: #E1E1E6;
+  font-weight: bold;
+  font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.4em;
 }
 
-.menu__nav--div {
+.navDiv {
   align-items: center;
   cursor: pointer;
   display: flex;
   margin-top: 16px;
-  border-radius: 16px;
+  border-radius: 5px;
   margin-right: 8px;
   text-decoration: none;
+  background-color: #4A4A4A;
 }
 
-.menu__nav--div:hover {
+.navDiv:hover {
   background-color: #ffffff8c;
 }
 
-.menu__nav--icode {
-  background-color: #5081fb26;
-  border-radius: 16px;
-  box-sizing: border-box;
-  color: #ffffff8c;
+.navText {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 16px 0 0;
-  overflow: hidden;
-  height: 48px;
-  width: 48px;
-}
-
-.menu__nav--iusers {
-  background-color: #5081fb26;
-  border-radius: 16px;
-  box-sizing: border-box;
-  color: #ffffff8c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 16px 0 0;
-  overflow: hidden;
-  height: 48px;
-  width: 48px;
-}
-
-.active {
-  color: #ffffff;
-}
-
-.active__icon {
-  color: #ffffff;
-  background-color: #5081fb;
-}
-
-.menu__nav--text {
-  color: #ffffff8c;
-  font-size: 16px;
+  width: 100%;
+  height: 44px;
+  color: #E1E1E6;
+  font-size: 14px;
   line-height: 24px;
+  padding-left: 24px;
 }
 
-.erro__principal {
-  color: #ffa500;
-  display: flex;
-  font-size: 10rem;
-  justify-content: center;
-  align-items: center;
+.code {
+  background: url(../../img/code.svg);
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-position-x: 12px;
 }
 
-.erro__aviso {
-  color: #fff;
-  text-align: center;
-  font-size: 3rem;
-}
-
-.fa-times {
-  font-size: 20rem;
+.comunity {
+  background: url(../../img/comunity.svg);
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-position-x: 12px;
 }

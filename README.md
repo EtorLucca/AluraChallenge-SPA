@@ -5,10 +5,10 @@
 
 Funcionalidades implementadas:
 - Página inicial com login (com autenticação no banco de dados)
-- Página de Cadastro de novo usuário (com stepper)
+- Página de Cadastro de novo usuário
 - Página Editor de Código com opção de salvar projetos
 - Highlight do código escrito a partir da escolha da linguagem
-- Página da comunidade com listagem e exclusão de projetos salvos
+- Página de projetos salvos com listagem e exclusão de projetos
 - Barra de pesquisa de projetos funcional
 
 --------------------------------------------------------------------------------
@@ -30,7 +30,7 @@ Tecnologias utilizadas nesse projeto:
 Passo a passo para visualização do projeto
 
 - Clonar o repositório usando o comando:
-    git clone https://github.com/EtorLucca/AluraChallenge-SPA.git
+    git clone https://github.com/EtorLucca/RepositoryCode-SPA.git
 
 - Usar um cluster MongoDB já criado ou Criar um cluster no MongoDB - Atlas com:
     - Username e password de sua preferência
@@ -60,42 +60,26 @@ Passo a passo para visualização do projeto
       <code> exemplo: APP_SECRET=abc123 </code>
 
 - Abra um terminal do VS Code na pasta server e digite o comando:<br>
-    <code>
-    npm run dev
-    </code><br>
+    <code> npm run dev </code><br>
   ou <br>
-    <code>
-    yarn dev <br>
-    </code><br>
+    <code> yarn dev </code><br><br>
 
 - Abra um terminal do VS Code na pasta server e digite o comando:<br>
-    <code>
-    npm install
-    </code><br>
+    <code> npm install </code><br>
   ou<br>
-    <code>
-    yarn add<br>
-    </code><br>
+    <code> yarn add </code><br><br>
   para instalar todos as dependencias<br>
 
 - Abra um terminal do VS Code na pasta web e digite o comando:<br>
-    <code>
-    npm install
-    </code><br>
+    <code> npm install </code><br>
   ou<br>
-    <code>
-    yarn add<br>
-    </code><br>
+    <code> yarn add </code><br><br>
   para instalar todos as dependencias<br>
 
 - Após a instalação dos pacotes digite o comando:<br>
-    <code>
-    npm start
-    </code><br>
+    <code> npm start </code><br>
   ou<br>
-    <code>
-    yarn start<br>
-    </code><br>
+    <code> yarn start </code><br><br>
 
 O VS Code irá abrir o navegador com o site rodando
       

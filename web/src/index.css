@@ -6,6 +6,8 @@ html {
   align-items: center;
   justify-content: center;
   margin: auto;
+  width: 100%;
+  height: 100vh;
 }
 
 *,
@@ -15,9 +17,9 @@ html {
 }
 
 body {
-  background-color: #051D3B;
+  background-color: #121214;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;

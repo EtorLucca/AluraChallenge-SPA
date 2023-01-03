@@ -25,7 +25,7 @@ function useErros(validacoes) {
 function criarEstadoInicial(validacoes) {
   const estadoInicial = {};
   for (let campo in validacoes) {
-    estadoInicial[campo] = { valido: true, texto: "" };
+    estadoInicial[campo] = { valido: false, texto: "" };
   }
   return estadoInicial;
 }

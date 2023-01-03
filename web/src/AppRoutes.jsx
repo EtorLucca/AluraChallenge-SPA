@@ -37,7 +37,7 @@ function AppRoutes() {
             path="/editor"
             element={
               <Private>
-                <MainPage />
+                <MainPage /> 
               </Private>
             }
           />
